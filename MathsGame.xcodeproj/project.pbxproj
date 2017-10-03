@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4945A69C1F842D1E0023CC88 /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4945A69B1F842D1E0023CC88 /* InputHandler.m */; };
 		9381520C1F8412A5004974F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9381520B1F8412A5004974F6 /* main.m */; };
 		938152141F8412C5004974F6 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 938152131F8412C5004974F6 /* Question.m */; };
 		938152171F8412E6004974F6 /* ScoreKeeper.m in Sources */ = {isa = PBXBuildFile; fileRef = 938152161F8412E6004974F6 /* ScoreKeeper.m */; };
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4945A69A1F842D1E0023CC88 /* InputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
+		4945A69B1F842D1E0023CC88 /* InputHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
 		938152081F8412A5004974F6 /* MathsGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MathsGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		9381520B1F8412A5004974F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		938152121F8412C5004974F6 /* Question.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
@@ -64,6 +67,8 @@
 			isa = PBXGroup;
 			children = (
 				9381520B1F8412A5004974F6 /* main.m */,
+				4945A69A1F842D1E0023CC88 /* InputHandler.h */,
+				4945A69B1F842D1E0023CC88 /* InputHandler.m */,
 				938152121F8412C5004974F6 /* Question.h */,
 				938152131F8412C5004974F6 /* Question.m */,
 				938152151F8412E6004974F6 /* ScoreKeeper.h */,
@@ -132,6 +137,7 @@
 				938152171F8412E6004974F6 /* ScoreKeeper.m in Sources */,
 				9381520C1F8412A5004974F6 /* main.m in Sources */,
 				938152141F8412C5004974F6 /* Question.m in Sources */,
+				4945A69C1F842D1E0023CC88 /* InputHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
