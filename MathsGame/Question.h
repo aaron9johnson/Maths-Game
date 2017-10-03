@@ -10,9 +10,9 @@
 #import "ScoreKeeper.h"
 
 @interface Question : NSObject
-@property int num1;
-@property int num2;
+@property NSInteger num1;
+@property NSInteger num2;
 
--(BOOL)checkAnswer:(int)answer score:(ScoreKeeper*)score;
+-(BOOL)checkAnswer:(NSInteger)answer score:(ScoreKeeper*)score;
 -(instancetype)init;
 @end

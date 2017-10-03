@@ -12,16 +12,15 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        BOOL doContinue = true;
         ScoreKeeper* score = [ScoreKeeper new];
-        while(doContinue){
+        while(TRUE){
             Question* currentQ = [Question new];
-            NSLog(@"%d + %d = ",currentQ.num1,currentQ.num2);
+            NSLog(@"%ld + %ld = ",(long)currentQ.num1,(long)currentQ.num2);
             char inputChars[255];
             fgets(inputChars, 255, stdin);
             NSString *inputString = [NSString stringWithUTF8String:inputChars];
             inputString = [inputString substringToIndex:(inputString.length-1)];
-            if([currentQ checkAnswer:(int)[inputString integerValue] score:score]){
+            if([currentQ checkAnswer:(NSInteger)[inputString integerValue] score:score]){
                 NSLog(@"Right!");
             } else {
                 NSLog(@"Wrong!");
@@ -30,10 +29,10 @@ int main(int argc, const char * argv[]) {
             NSLog(@"More Maths? y/n: ");
             fgets(inputChars, 255, stdin);
             if (strncmp("n", inputChars, 1) == 0) {
-                doContinue = false;
+                break;
             }
         }
-        NSLog(@"Right: %d, Wrong: %d, Percentage: %.2f",score.right, score.wrong, [score percentage]);
+        NSLog(@"Final Score - Right: %d, Wrong: %d, Percentage: %.2f",score.right, score.wrong, [score percentage]);
     }
     return 0;
 }

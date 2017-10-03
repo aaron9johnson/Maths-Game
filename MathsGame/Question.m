@@ -16,7 +16,7 @@
     }
     return self;
 }
--(BOOL)checkAnswer:(int)answer score:(ScoreKeeper *)score{
+-(BOOL)checkAnswer:(NSInteger)answer score:(ScoreKeeper *)score{
     if(self.num1 + self.num2 == answer){
         [score correct];
         return true;
