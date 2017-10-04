@@ -13,6 +13,7 @@
 @property int num1;
 @property int num2;
 @property int answer;
+@property NSString *question;
 @property NSDate *startTime;
 @property NSDate *endTime;
 
@@ -20,4 +21,5 @@
 -(BOOL)checkAnswer:(int)answer score:(ScoreKeeper*)score;
 -(instancetype)init;
 -(NSTimeInterval)answerTime;
+-(void)generateQuestion;
 @end

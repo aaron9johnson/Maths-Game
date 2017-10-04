@@ -14,12 +14,14 @@
         _num1 = arc4random_uniform(90) + 10;
         _num2 = arc4random_uniform(90) + 10;
         _startTime = [NSDate date];
+        _question = [NSString stringWithFormat:@"%d + %d = ",_num1,_num2];
+        _answer = _num1 + _num2;
     }
     return self;
 }
 -(BOOL)checkAnswer:(int)answer score:(ScoreKeeper *)score{
     _endTime = [NSDate date];
-    if(_num1 + _num2 == answer){
+    if(_answer == answer){
         [score correct];
         return true;
     }
@@ -28,5 +30,8 @@
 }
 -(NSTimeInterval)answerTime{
     return [_endTime timeIntervalSinceDate:_startTime];
+}
+-(void)generateQuestion{
+    //empty
 }
 @end
