@@ -12,7 +12,12 @@
 @interface Question : NSObject
 @property int num1;
 @property int num2;
+@property int answer;
+@property NSDate *startTime;
+@property NSDate *endTime;
+
 
 -(BOOL)checkAnswer:(int)answer score:(ScoreKeeper*)score;
 -(instancetype)init;
+-(NSTimeInterval)answerTime;
 @end

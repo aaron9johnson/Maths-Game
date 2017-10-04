@@ -13,15 +13,20 @@
     if(self = [super init]){
         _num1 = arc4random_uniform(90) + 10;
         _num2 = arc4random_uniform(90) + 10;
+        _startTime = [NSDate date];
     }
     return self;
 }
 -(BOOL)checkAnswer:(int)answer score:(ScoreKeeper *)score{
-    if(self.num1 + self.num2 == answer){
+    _endTime = [NSDate date];
+    if(_num1 + _num2 == answer){
         [score correct];
         return true;
     }
     [score inCorrect];
     return false;
+}
+-(NSTimeInterval)answerTime{
+    return [_endTime timeIntervalSinceDate:_startTime];
 }
 @end

@@ -9,13 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "Question.h"
 #import "ScoreKeeper.h"
+#import "QuestionManager.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         BOOL doContinue = true;
         ScoreKeeper* score = [ScoreKeeper new];
+        QuestionManager *qManager = [QuestionManager new];
         while(doContinue){
             Question* currentQ = [Question new];
+            [qManager.questions addObject:currentQ];
             NSLog(@"%d + %d = ",currentQ.num1,currentQ.num2);
             char inputChars[255];
             fgets(inputChars, 255, stdin);
@@ -27,6 +30,7 @@ int main(int argc, const char * argv[]) {
                 NSLog(@"Wrong!");
             }
             NSLog(@"Right: %d, Wrong: %d, Percentage: %.2f",score.right, score.wrong, [score percentage]);
+            NSLog(@"%@",[qManager timeOutput]);
             NSLog(@"More Maths? y/n: ");
             fgets(inputChars, 255, stdin);
             if (strncmp("n", inputChars, 1) == 0) {
@@ -34,6 +38,7 @@ int main(int argc, const char * argv[]) {
             }
         }
         NSLog(@"Right: %d, Wrong: %d, Percentage: %.2f",score.right, score.wrong, [score percentage]);
+        NSLog(@"%@",[qManager timeOutput]);
     }
     return 0;
 }
